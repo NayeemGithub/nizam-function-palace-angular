@@ -111,6 +111,6 @@
             }
 
             .body-content img {
-                height: 350px; /* Adjust height further for very small screens */
+                height: 800px; /* Adjust height further for very small screens */
             }
         }

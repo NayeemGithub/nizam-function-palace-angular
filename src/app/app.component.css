@@ -16,3 +16,24 @@
     z-index: 1000;
     border-radius: 50%;
   }
+
+  @media (max-width: 480px) {
+    .fixed-whatsapp {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        width: 17.7vw;   /* Width 10% of the viewport width */
+        height: auto;  /* Maintain aspect ratio */
+        z-index: 1000;
+    }
+    
+    .fixed-callus {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        width: 15.7vw;   /* Width 10% of the viewport width */
+        height: auto;  /* Maintain aspect ratio */
+        z-index: 1000;
+        border-radius: 50%;
+      }
+  }
