@@ -1,0 +1,61 @@
+  /* Basic reset and margin */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #8b6032;
+    color: rgb(238, 238, 245);
+    position: fixed; /* Fix the header at the top */
+    top: 0; /* Position it at the top */
+    left: 0; /* Ensure it starts from the left edge */
+    width: 100%; /* Make it span the entire width of the page */
+    z-index: 1000; /* Ensure the header stays above other content */
+}
+
+/* Company name styling */
+.company-name h1 {
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    font-style: italic;
+}
+
+/* Right-side navigation styling */
+.nav-right ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-right ul li {
+    margin-left: 20px;
+}
+
+.nav-right ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-right ul li a:hover {
+    color: #f1c40f;
+}
+
+/* Body Styling */
+.body-content {
+    text-align: center;
+    /*margin-top: 80px;*/ /* Add some space so content doesn't get hidden behind the fixed header */
+}
+
+.body-content img {
+    width: 100%; /* Makes the image take up the full width of the screen */
+    height: 720px; /* Fixed height for the image */
+    border-radius: 10px; /* Optional: Adds rounded corners to the image */
+}

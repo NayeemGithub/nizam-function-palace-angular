@@ -9,9 +9,10 @@
 
 .fixed-callus {
     position: fixed;
-    bottom: 0px;
+    bottom: 10px;
     left: 10px;
-    width: 4vw;   /* Width 10% of the viewport width */
+    width: 3.7vw;   /* Width 10% of the viewport width */
     height: auto;  /* Maintain aspect ratio */
     z-index: 1000;
+    border-radius: 50%;
   }
