@@ -7,7 +7,7 @@ import { HeaderBarComponent } from "./header-bar/header-bar.component";
   //imports: [RouterOutlet, HeaderBarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  standalone: false
+  standalone: true
 })
 export class AppComponent {
   title = 'nizam-function-palace-web-app';
