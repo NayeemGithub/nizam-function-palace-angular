@@ -4,7 +4,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         /* Header styling */
         .header {
             display: flex;
@@ -20,97 +20,96 @@
             z-index: 1000; /* Ensure the header stays above other content */
         }
 
-        /* Company name styling */
+        /* Company logo and name styling */
+        .company-name {
+            display: flex;
+            align-items: center;
+        }
+
+        .company-name img {
+            width: 50px; /* Adjust width to fit the logo */
+            height: 50px; /* Adjust height to fit the logo */
+            margin-right: 10px; /* Space between logo and text */
+            border-radius: 50%; /* Optional: make the logo circular */
+        }
+
         .company-name h1 {
             font-size: 24px;
             font-family: 'Arial', sans-serif;
             font-style: italic;
         }
-        
+
         /* Right-side navigation styling */
         .nav-right ul {
             display: flex;
             list-style: none;
         }
-        
+
         .nav-right ul li {
             margin-left: 20px;
         }
-        
+
         .nav-right ul li a {
             text-decoration: none;
             color: white;
             font-size: 16px;
             transition: color 0.3s;
         }
-        
+
         .nav-right ul li a:hover {
             color: #f1c40f;
+        }
+
+        /* Hide menu on mobile and show hamburger icon */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
         }
 
         /* Body Styling */
         .body-content {
             text-align: center;
-           /* margin-top: 80px;*/ /* Add some space so content doesn't get hidden behind the fixed header */
         }
 
         .body-content img {
             width: 100%; /* Makes the image take up the full width of the screen */
             height: 750px; /* Fixed height for the image */
-            border-radius: 10px; /* Optional: Adds round        ed corners to the image */
+            border-radius: 10px; /* Optional: Adds rounded corners to the image */
             object-fit: cover; /* Ensures the image covers the entire area */
         }
 
         /* Media Queries for Responsiveness */
         @media (max-width: 768px) {
-            /* Adjust header layout for smaller screens */
-            .header {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 10px 15px;
-            }
-
-            /* Make the company name larger on mobile */
-            .company-name h1 {
-                font-size: 20px;
-            }
-
-            /* Stack the navigation items vertically */
+            /* Show hamburger icon and hide the navigation menu */
             .nav-right ul {
+                display: none;
                 flex-direction: column;
-                margin-top: 10px;
+                width: 100%;
+                text-align: center;
+                background-color: #8b6032;
+                position: absolute;
+                top: 50px;
+                left: 0;
+            }
+
+            .nav-right ul.show {
+                display: flex;
             }
 
             .nav-right ul li {
-                margin-left: 0;
-                margin-bottom: 10px;
+                margin: 10px 0;
             }
 
-            .nav-right ul li a {
-                font-size: 14px;
-            }
-
-            /* Adjust image height on mobile */
-            .body-content img {
-                height: 500px; /* Adjust height for smaller screens */
-            }
-        }
-
-        @media (max-width: 480px) {
-            /* Further adjustments for very small screens */
-            .header {
-                padding: 10px 10px;
-            }
-
-            .company-name h1 {
-                font-size: 18px;
-            }
-
-            .nav-right ul li a {
-                font-size: 12px;
-            }
-
-            .body-content img {
-                height: 800px; /* Adjust height further for very small screens */
+            /* Show hamburger menu */
+            .hamburger {
+                display: flex;
             }
         }
