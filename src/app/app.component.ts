@@ -4,7 +4,7 @@ import { HeaderBarComponent } from "./header-bar/header-bar.component";
 
 @Component({
   selector: 'app-root',
-  //imports: [RouterOutlet, HeaderBarComponent],
+  imports: [HeaderBarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   standalone: true

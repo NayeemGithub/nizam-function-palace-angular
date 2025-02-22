@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-header-bar',
   imports: [],
   templateUrl: './header-bar.component.html',
-  styleUrl: './header-bar.component.css'
+  styleUrl: './header-bar.component.css',
+  standalone: true
 })
 export class HeaderBarComponent {
 ngOnInit() {
