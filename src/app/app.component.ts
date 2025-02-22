@@ -4,9 +4,10 @@ import { HeaderBarComponent } from "./header-bar/header-bar.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderBarComponent],
+  //imports: [RouterOutlet, HeaderBarComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  standalone: false
 })
 export class AppComponent {
   title = 'nizam-function-palace-web-app';

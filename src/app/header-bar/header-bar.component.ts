@@ -7,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrl: './header-bar.component.css'
 })
 export class HeaderBarComponent {
+ngOnInit() {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  if (hamburger) {
+    hamburger.addEventListener('click', () => {
+      if(navLinks){
+        navLinks.classList.toggle('show');
+      }
 
+    });
+  }
+}
 }
