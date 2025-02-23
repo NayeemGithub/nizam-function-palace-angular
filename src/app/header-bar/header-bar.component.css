@@ -1,115 +1,196 @@
-        /* Basic reset and margin */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/* Basic reset and margin */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        /* Header styling */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #8b6032;
-            color: rgb(238, 238, 245);
-            position: fixed; /* Fix the header at the top */
-            top: 0; /* Position it at the top */
-            left: 0; /* Ensure it starts from the left edge */
-            width: 100%; /* Make it span the entire width of the page */
-            z-index: 1000; /* Ensure the header stays above other content */
-        }
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #8b6032;
+    color: rgb(238, 238, 245);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
 
-        /* Company logo and name styling */
-        .company-name {
-            display: flex;
-            align-items: center;
-        }
+/* Company logo and name styling */
+.company-name {
+    display: flex;
+    align-items: center;
+}
 
-        .company-name img {
-            width: 50px; /* Adjust width to fit the logo */
-            height: 50px; /* Adjust height to fit the logo */
-            margin-right: 10px; /* Space between logo and text */
-            border-radius: 50%; /* Optional: make the logo circular */
-        }
+.company-name img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
 
-        .company-name h1 {
-            font-size: 24px;
-            font-family: 'Arial', sans-serif;
-            font-style: italic;
-        }
+.company-name h1 {
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    font-style: italic;
+}
 
-        /* Right-side navigation styling */
-        .nav-right ul {
-            display: flex;
-            list-style: none;
-        }
+/* Navigation styling */
+.nav-right ul {
+    display: flex;
+    list-style: none;
+}
 
-        .nav-right ul li {
-            margin-left: 20px;
-        }
+.nav-right ul li {
+    margin-left: 20px;
+}
 
-        .nav-right ul li a {
-            text-decoration: none;
-            color: white;
-            font-size: 16px;
-            transition: color 0.3s;
-        }
+.nav-right ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+}
 
-        .nav-right ul li a:hover {
-            color: #f1c40f;
-        }
+.nav-right ul li a:hover {
+    color: #f1c40f;
+}
 
-        /* Hide menu on mobile and show hamburger icon */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
+/* Hide menu on mobile and show hamburger icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
 
-        .hamburger div {
-            width: 25px;
-            height: 3px;
-            background-color: white;
-            margin: 4px 0;
-        }
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
 
-        /* Body Styling */
-        .body-content {
-            text-align: center;
-        }
+/* Body Styling */
+.body-content {
+    text-align: center;
+}
 
-        .body-content img {
-            width: 100%; /* Makes the image take up the full width of the screen */
-            height: 750px; /* Fixed height for the image */
-            border-radius: 10px; /* Optional: Adds rounded corners to the image */
-            object-fit: cover; /* Ensures the image covers the entire area */
-        }
+.body-content img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+    display: block; /* Removes any margin or padding around the image */
+}
 
-        /* Media Queries for Responsiveness */
-        @media (max-width: 768px) {
-            /* Show hamburger icon and hide the navigation menu */
-            .nav-right ul {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                text-align: center;
-                background-color: #8b6032;
-                position: absolute;
-                top: 50px;
-                left: 0;
-            }
+/* About Us Section */
+.about-us-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+    text-align: center;
+}
 
-            .nav-right ul.show {
-                display: flex;
-            }
+.about-us-section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #8b6032;
+}
 
-            .nav-right ul li {
-                margin: 10px 0;
-            }
+.about-us-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-            /* Show hamburger menu */
-            .hamburger {
-                display: flex;
-            }
-        }
+/* Gallery Section */
+.gallery-section {
+    padding: 50px 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #8b6032;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* Zoom-in effect */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .nav-right ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #8b6032;
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
+
+    .nav-right ul.show {
+        display: flex;
+    }
+
+    .nav-right ul li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Body content image: Adjust height for mobile */
+    .body-content img {
+        height: auto;
+    }
+
+    /* About Us Section: Adjust padding for smaller screens */
+    .about-us-section {
+        padding: 30px 10px;
+    }
+
+    .about-us-section p {
+        font-size: 20px;
+    }
+
+    /* Gallery Section: Adjust grid for mobile */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: auto;
+    }
+}
