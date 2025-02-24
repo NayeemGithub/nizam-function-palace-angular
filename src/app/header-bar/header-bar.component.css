@@ -11,8 +11,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #8b6032;
-    color: rgb(238, 238, 245);
+    background-color: #232b2d;
+    color: #f3e17f;
     position: fixed;
     top: 0;
     left: 0;
@@ -51,7 +51,7 @@
 
 .nav-right ul li a {
     text-decoration: none;
-    color: white;
+    color: #f3e17f;
     font-size: 16px;
     transition: color 0.3s;
 }
@@ -70,7 +70,7 @@
 .hamburger div {
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: #f3e17f;
     margin: 4px 0;
 }
 
@@ -82,8 +82,8 @@
 .body-content img {
     width: 100vw;
     height: 100vh;
-    object-fit: cover; /* Ensures the image covers the entire area without distortion */
-    display: block; /* Removes any margin or padding around the image */
+    object-fit: cover;
+    display: block;
 }
 
 /* About Us Section */
@@ -96,16 +96,19 @@
 
 .about-us-section h2 {
     font-size: 28px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     color: #8b6032;
+    text-align: center;
+    position: relative;
 }
 
-.about-us-section p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
-    max-width: 800px;
-    margin: 0 auto;
+.about-us-section h2::after {
+    content: '';
+    display: block;
+    width: 50px;  /* Small underline */
+    height: 3px;  /* Thickness of the underline */
+    background-color: #8b6032;
+    margin: 10px auto 0;  /* Centers the underline */
 }
 
 /* Gallery Section */
@@ -119,6 +122,17 @@
     font-size: 28px;
     margin-bottom: 30px;
     color: #8b6032;
+    text-align: center;
+    position: relative;
+}
+
+.gallery-section h2::after {
+    content: '';
+    display: block;
+    width: 50px;  /* Small underline */
+    height: 3px;  /* Thickness of the underline */
+    background-color: #8b6032;
+    margin: 10px auto 0;  /* Centers the underline */
 }
 
 .gallery-grid {
@@ -143,8 +157,210 @@
 }
 
 .gallery-item:hover img {
-    transform: scale(1.1); /* Zoom-in effect */
+    transform: scale(1.1);
 }
+
+/* Services Section */
+.services-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #8b6032;
+    text-align: center;
+    position: relative;
+}
+
+.services-section h2::after {
+    content: '';
+    display: block;
+    width: 50px;  /* Small underline */
+    height: 3px;  /* Thickness of the underline */
+    background-color: #8b6032;
+    margin: 10px auto 0;  /* Centers the underline */
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.service-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 80px 20px;
+    transition: transform 0.3s ease; /* Added smooth transition */
+    min-height: 350px; /* Adjust the minimum height if needed */
+}
+
+/* Hover effect: Move the card upwards */
+.service-card:hover {
+    transform: translateY(-10px); /* Moves the card up by 10px */
+}
+
+/* Optional: Change icon color or add any other effect on hover */
+.service-card:hover i {
+    color: #f1c40f; /* Change icon color on hover */
+}
+
+.service-card i {
+    font-size: 4rem;
+    color: #8b6032;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.service-card h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.service-card p {
+    margin-top: 10px;
+    color: #666;
+    font-size: 1rem;
+}
+
+/* FAQ Section Styling */
+/* FAQ Section Styling */
+.faq-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.faq-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #8b6032;
+    text-align: center;
+    position: relative;
+}
+
+.faq-section h2::after {
+    content: '';
+    display: block;
+    width: 50px;  /* Small underline */
+    height: 3px;  /* Thickness of the underline */
+    background-color: #8b6032;
+    margin: 10px auto 0;  /* Centers the underline */
+}
+
+.faq-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s; /* Added transition for smooth effect */
+}
+
+.faq-item p {
+    padding: 15px;
+    display: none; /* Hidden by default */
+    font-size: 16px;
+    color: #333;
+}
+
+/* Change answer's color to black and bold when active */
+.faq-item.active p {
+    display: block; /* Show the paragraph when the item is active */
+    color: black; /* Change the text color to black */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Optional: Style the question when clicked (active state) */
+.faq-item.active .faq-question {
+    background-color: #8b6032; /* Change the background color when active */
+    color: white; /* Change text color to white for contrast */
+}
+
+.arrow {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate the arrow when the FAQ item is active */
+.arrow.rotate {
+    transform: rotate(180deg); /* Rotates the arrow */
+}
+
+/* Contact Us Section */
+.contact-us-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.contact-us-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #8b6032;
+    text-align: center;
+    position: relative;
+}
+
+.contact-us-section h2::after {
+    content: '';
+    display: block;
+    width: 50px;  /* Small underline */
+    height: 3px;  /* Thickness of the underline */
+    background-color: #8b6032;
+    margin: 10px auto 0;  /* Centers the underline */
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #333;
+}
+
+.contact-item i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #8b6032; /* Icon color */
+}
+
+.contact-item span {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Optional: Change color on hover */
+.contact-item:hover {
+    color: #f1c40f;
+}
+
+.contact-item:hover i {
+    color: #f1c40f;
+}
+
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
@@ -153,7 +369,7 @@
         flex-direction: column;
         width: 100%;
         text-align: center;
-        background-color: #8b6032;
+        background-color:#232b2d ;
         position: absolute;
         top: 50px;
         left: 0;
@@ -192,5 +408,10 @@
 
     .gallery-item img {
         height: auto;
+    }
+
+    /* Services Section: Adjust grid for mobile */
+    .services-grid {
+        grid-template-columns: 1fr;
     }
 }
