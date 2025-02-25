@@ -1,417 +1,556 @@
-/* Basic reset and margin */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Header styling */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #232b2d;
-    color: #f3e17f;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #232b2d;
+  color: #f3e17f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 /* Company logo and name styling */
 .company-name {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .company-name img {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-    border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
 }
 
 .company-name h1 {
-    font-size: 24px;
-    font-family: 'Arial', sans-serif;
-    font-style: italic;
+  font-size: 24px;
+  font-family: 'cursive', sans-serif;
+  font-style: italic;
 }
 
 /* Navigation styling */
 .nav-right ul {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 .nav-right ul li {
-    margin-left: 20px;
+  margin-left: 20px;
+  font-style: italic;
 }
 
 .nav-right ul li a {
-    text-decoration: none;
-    color: #f3e17f;
-    font-size: 16px;
-    transition: color 0.3s;
+  text-decoration: none;
+  color: #f3e17f;
+  font-size: 16px;
+  transition: color 0.3s;
 }
 
 .nav-right ul li a:hover {
-    color: #f1c40f;
+  color: #f1c40f;
 }
 
 /* Hide menu on mobile and show hamburger icon */
 .hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
 }
 
 .hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: #f3e17f;
-    margin: 4px 0;
+  width: 25px;
+  height: 3px;
+  background-color: #f3e17f;
+  margin: 4px 0;
 }
 
 /* Body Styling */
 .body-content {
-    text-align: center;
+  text-align: center;
 }
 
 .body-content img {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    display: block;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
 }
 
 /* About Us Section */
 .about-us-section {
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-    margin-top: 20px;
-    text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .about-us-section h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #8b6032;
-    text-align: center;
-    position: relative;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #6c3800;
+  text-align: center;
+  position: relative;
 }
 
 .about-us-section h2::after {
-    content: '';
-    display: block;
-    width: 50px;  /* Small underline */
-    height: 3px;  /* Thickness of the underline */
-    background-color: #8b6032;
-    margin: 10px auto 0;  /* Centers the underline */
+  content: '';
+  display: block;
+  width: 50px;  /* Small underline */
+  height: 3px;  /* Thickness of the underline */
+  background-color: #6c3800;
+  margin: 10px auto 0;  /* Centers the underline */
 }
 
 /* Gallery Section */
 .gallery-section {
-    padding: 50px 20px;
-    background-color: #f0f0f0;
-    text-align: center;
+  padding: 50px 20px;
+  background-color: #f0f0f0;
+  text-align: center;
 }
 
 .gallery-section h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #8b6032;
-    text-align: center;
-    position: relative;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #6c3800;
+  text-align: center;
+  position: relative;
 }
 
 .gallery-section h2::after {
-    content: '';
-    display: block;
-    width: 50px;  /* Small underline */
-    height: 3px;  /* Thickness of the underline */
-    background-color: #8b6032;
-    margin: 10px auto 0;  /* Centers the underline */
+  content: '';
+  display: block;
+  width: 50px;  /* Small underline */
+  height: 3px;  /* Thickness of the underline */
+  background-color: #6c3800;
+  margin: 10px auto 0;  /* Centers the underline */
 }
 
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    justify-items: center;
-    align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  justify-items: center;
+  align-items: center;
 }
 
 .gallery-item {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .gallery-item img {
-    width: 100%;
-    height: 250px;
-    border-radius: 10px;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
 }
 
 .gallery-item:hover img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* Services Section */
 .services-section {
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
 }
 
 .services-section h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #8b6032;
-    text-align: center;
-    position: relative;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #6c3800;
+  text-align: center;
+  position: relative;
 }
 
 .services-section h2::after {
-    content: '';
-    display: block;
-    width: 50px;  /* Small underline */
-    height: 3px;  /* Thickness of the underline */
-    background-color: #8b6032;
-    margin: 10px auto 0;  /* Centers the underline */
+  content: '';
+  display: block;
+  width: 50px;  /* Small underline */
+  height: 3px;  /* Thickness of the underline */
+  background-color: #6c3800;
+  margin: 10px auto 0;  /* Centers the underline */
 }
 
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
 }
 
 .service-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 80px 20px;
-    transition: transform 0.3s ease; /* Added smooth transition */
-    min-height: 350px; /* Adjust the minimum height if needed */
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 80px 20px;
+  transition: transform 0.3s ease; /* Added smooth transition */
+  min-height: 350px; /* Adjust the minimum height if needed */
 }
 
 /* Hover effect: Move the card upwards */
 .service-card:hover {
-    transform: translateY(-10px); /* Moves the card up by 10px */
+  transform: translateY(-10px); /* Moves the card up by 10px */
 }
 
 /* Optional: Change icon color or add any other effect on hover */
 .service-card:hover i {
-    color: #f1c40f; /* Change icon color on hover */
+  color: #f1c40f; /* Change icon color on hover */
 }
 
 .service-card i {
-    font-size: 4rem;
-    color: #8b6032;
-    margin-bottom: 15px;
-    transition: color 0.3s ease;
+  font-size: 4rem;
+  color: #6c3800;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
 }
 
 .service-card h3 {
-    margin-top: 15px;
-    font-size: 1.5rem;
-    color: #333;
+  margin-top: 15px;
+  font-size: 1.5rem;
+  color: #333;
 }
 
 .service-card p {
-    margin-top: 10px;
-    color: #666;
-    font-size: 1rem;
+  margin-top: 10px;
+  color: #666;
+  font-size: 1rem;
 }
 
 /* FAQ Section Styling */
-/* FAQ Section Styling */
 .faq-section {
-    padding: 20px;
-    background-color: #f9f9f9;
+  padding: 20px;
+  background-color: #f9f9f9;
 }
 
 .faq-section h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #8b6032;
-    text-align: center;
-    position: relative;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #6c3800;
+  text-align: center;
+  position: relative;
 }
 
 .faq-section h2::after {
-    content: '';
-    display: block;
-    width: 50px;  /* Small underline */
-    height: 3px;  /* Thickness of the underline */
-    background-color: #8b6032;
-    margin: 10px auto 0;  /* Centers the underline */
+  content: '';
+  display: block;
+  width: 50px;  /* Small underline */
+  height: 3px;  /* Thickness of the underline */
+  background-color: #6c3800;
+  margin: 10px auto 0;  /* Centers the underline */
 }
 
 .faq-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 .faq-question {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    padding: 15px;
-    font-size: 18px;
-    background-color: #fff;
-    color: #333;
-    transition: background-color 0.3s, color 0.3s; /* Added transition for smooth effect */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px;
+  font-size: 18px;
+  background-color: #fff;
+  color:    #6c3800;
+  transition: background-color 0.3s, color 0.3s; /* Added transition for smooth effect */
 }
 
 .faq-item p {
-    padding: 15px;
-    display: none; /* Hidden by default */
-    font-size: 16px;
-    color: #333;
+  padding: 15px;
+  display: none; /* Hidden by default */
+  font-size: 16px;
+  color: #333;
 }
 
 /* Change answer's color to black and bold when active */
 .faq-item.active p {
-    display: block; /* Show the paragraph when the item is active */
-    color: black; /* Change the text color to black */
-    font-weight: bold; /* Make the text bold */
+  display: block; /* Show the paragraph when the item is active */
+  color: black; /* Change the text color to black */
+  font-weight: bold; /* Make the text bold */
 }
 
 /* Optional: Style the question when clicked (active state) */
 .faq-item.active .faq-question {
-    background-color: #8b6032; /* Change the background color when active */
-    color: white; /* Change text color to white for contrast */
+  background-color: #6c3800; /* Change the background color when active */
+  color: white; /* Change text color to white for contrast */
 }
 
 .arrow {
-    font-size: 20px;
-    transition: transform 0.3s ease;
+  font-size: 20px;
+  transition: transform 0.3s ease;
 }
 
 /* Rotate the arrow when the FAQ item is active */
 .arrow.rotate {
-    transform: rotate(180deg); /* Rotates the arrow */
+  transform: rotate(180deg); /* Rotates the arrow */
 }
 
 /* Contact Us Section */
 .contact-us-section {
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
 }
 
 .contact-us-section h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #8b6032;
-    text-align: center;
-    position: relative;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #6c3800;
+  text-align: center;
+  position: relative;
 }
 
 .contact-us-section h2::after {
-    content: '';
-    display: block;
-    width: 50px;  /* Small underline */
-    height: 3px;  /* Thickness of the underline */
-    background-color: #8b6032;
-    margin: 10px auto 0;  /* Centers the underline */
+  content: '';
+  display: block;
+  width: 50px;  /* Small underline */
+  height: 3px;  /* Thickness of the underline */
+  background-color: #6c3800;
+  margin: 10px auto 0;  /* Centers the underline */
 }
 
 .contact-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .contact-item {
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    color: #333;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: #333;
 }
 
 .contact-item i {
-    font-size: 24px;
-    margin-right: 10px;
-    color: #8b6032; /* Icon color */
+  font-size: 24px;
+  margin-right: 10px;
+  color: #6c3800; /* Icon color */
 }
 
 .contact-item span {
-    font-size: 18px;
-    color: #333;
+  font-size: 18px;
+  color: #333;
 }
 
 /* Optional: Change color on hover */
 .contact-item:hover {
-    color: #f1c40f;
+  color: #f1c40f;
 }
 
 .contact-item:hover i {
-    color: #f1c40f;
+  color: #f1c40f;
 }
 
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    .nav-right ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        background-color:#232b2d ;
-        position: absolute;
-        top: 50px;
-        left: 0;
-    }
+  .nav-right ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      background-color:#232b2d ;
+      position: absolute;
+      top: 70px;
+      left: 0;
+  }
 
-    .nav-right ul.show {
-        display: flex;
-    }
+  .nav-right ul.show {
+      display: flex;
+  }
 
-    .nav-right ul li {
-        margin: 10px 0;
-    }
+  .nav-right ul li {
+      margin: 10px 0;
+  }
 
-    .hamburger {
-        display: flex;
-    }
+  .hamburger {
+      display: flex;
+  }
 
-    /* Body content image: Adjust height for mobile */
-    .body-content img {
-        height: auto;
-    }
+  /* Body content image: Adjust height for mobile */
+  .body-content img {
+      height: auto;
+  }
+  
+  /* About Us Section: Adjust padding for smaller screens */
+  .about-us-section {
+      padding: 30px 10px;
+  }
 
-    /* About Us Section: Adjust padding for smaller screens */
-    .about-us-section {
-        padding: 30px 10px;
-    }
+  .about-us-section p {
+      font-size: 20px;
+  }
 
-    .about-us-section p {
-        font-size: 20px;
-    }
+  /* Gallery Section: Adjust grid for mobile */
+  .gallery-grid {
+      grid-template-columns: 1fr;
+  }
 
-    /* Gallery Section: Adjust grid for mobile */
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
+  .gallery-item img {
+      height: auto;
+  }
 
-    .gallery-item img {
-        height: auto;
-    }
+  /* Services Section: Adjust grid for mobile */
+  .services-grid {
+      grid-template-columns: 1fr;
+  }
+} 
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;  /* Adjust if you need a specific width */
+  height: 100%;
+  overflow: hidden;
+}
 
-    /* Services Section: Adjust grid for mobile */
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
+/* Hide all images initially */
+.slide {
+  display: none;
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Maintain aspect ratio of images */
+  transition: opacity 1s ease;
+}
+
+/* Show the first image by default */
+.slide:first-child {
+  display: block;
+}
+ 
+/* Add CSS for the hamburger menu toggle functionality */
+#hamburger.active + .nav-right ul {
+  display: flex !important; /* Ensures the navigation is shown when hamburger is active */
+}
+
+/* Adjust the header layout on smaller screens */
+@media (max-width: 768px) {
+  /* Header Section */
+  .header {
+    flex-direction: column; /* Stack elements in a column for mobile */
+    padding: 15px;
+    padding-left: 0%;
+    text-align: center;
+  }
+  
+  .company-name h1 {
+    padding-left: 0px;
+    padding-right: 45px;
+    font-size: 18px; /* Adjust logo text size for mobile */
+  }
+
+  .company-name img {
+    width: 40px; /* Reduce logo size for mobile */
+    height: 40px;
+  }
+
+  .nav-right ul {
+    display: none; /* Hide navigation menu by default */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: #232b2d;
+    text-align: center;
+  }
+
+  .nav-right ul.show {
+    display: flex; /* Display navigation when hamburger menu is clicked */
+  }
+
+  /* Hamburger Icon */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+
+  .hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: #f3e17f;
+    margin: 4px 0;
+  }
+
+  .about-us-section {
+    padding: 30px 10px;
+  }
+
+  .about-us-section h2 {
+    font-size: 24px;
+  }
+
+  .about-us-section p {
+    font-size: 16px;
+  }
+
+  /* Gallery Section */
+  .gallery-grid {
+    grid-template-columns: 1fr; /* Stack gallery items vertically on small screens */
+  }
+
+  .gallery-item img {
+    height: auto; /* Let the images scale responsively */
+  }
+
+  /* Services Section */
+  .services-grid {
+    grid-template-columns: 1fr; /* Stack service cards vertically on mobile */
+  }
+
+  .service-card {
+    padding: 20px;
+    min-height: 250px; /* Reduce card height on mobile */
+  }
+
+  .service-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .service-card p {
+    font-size: 14px;
+  }
+
+  /* FAQ Section */
+  .faq-question {
+    font-size: 16px;
+  }
+
+  /* Contact Us Section */
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-item {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .contact-item i {
+    font-size: 20px;
+  }
 }
