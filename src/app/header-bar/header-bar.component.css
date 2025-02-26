@@ -1,4 +1,4 @@
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -109,6 +109,7 @@
   height: 3px;  /* Thickness of the underline */
   background-color: #6c3800;
   margin: 10px auto 0;  /* Centers the underline */
+  
 }
 
 /* Gallery Section */
@@ -230,6 +231,7 @@
   font-size: 1rem;
 }
 
+/* FAQ Section Styling */
 /* FAQ Section Styling */
 .faq-section {
   padding: 20px;
@@ -362,16 +364,18 @@
 
 
 /* Media Queries for Responsiveness */
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .nav-right ul {
       display: none;
       flex-direction: column;
       width: 100%;
       text-align: center;
-      background-color:#232b2d ;
+      background-color: #232b2d;
       position: absolute;
       top: 70px;
       left: 0;
+      z-index: 1001; /* Ensure it's above other content */
   }
 
   .nav-right ul.show {
@@ -388,7 +392,7 @@
 
   /* Body content image: Adjust height for mobile */
   .body-content img {
-      height: auto;
+      height: auto; /* Maintain aspect ratio */
   }
   
   /* About Us Section: Adjust padding for smaller screens */
@@ -397,160 +401,43 @@
   }
 
   .about-us-section p {
-      font-size: 20px;
+      font-size: 16px; /* Reduce font size for better fit */
+      line-height: 1.5; /* Increase line height for readability */
   }
 
   /* Gallery Section: Adjust grid for mobile */
   .gallery-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr; /* One column on mobile */
   }
 
   .gallery-item img {
-      height: auto;
+      height: auto; /* Maintain aspect ratio */
+      max-height: 200px; /* Set a max height for better control */
   }
 
   /* Services Section: Adjust grid for mobile */
   .services-grid {
-      grid-template-columns: 1fr;
-  }
-} 
-/* Slideshow container */
-.slideshow-container {
-  position: relative;
-  width: 100%;
-  max-width: 100%;  /* Adjust if you need a specific width */
-  height: 100%;
-  overflow: hidden;
-}
-
-/* Hide all images initially */
-.slide {
-  display: none;
-  width: 100%;
-  height: auto;
-  object-fit: cover; /* Maintain aspect ratio of images */
-  transition: opacity 1s ease;
-}
-
-/* Show the first image by default */
-.slide:first-child {
-  display: block;
-}
- 
-/* Add CSS for the hamburger menu toggle functionality */
-#hamburger.active + .nav-right ul {
-  display: flex !important; /* Ensures the navigation is shown when hamburger is active */
-}
-
-/* Adjust the header layout on smaller screens */
-@media (max-width: 768px) {
-  /* Header Section */
-  .header {
-    flex-direction: column; /* Stack elements in a column for mobile */
-    padding: 15px;
-    padding-left: 0%;
-    text-align: center;
-  }
-  
-  .company-name h1 {
-    padding-left: 0px;
-    padding-right: 45px;
-    font-size: 18px; /* Adjust logo text size for mobile */
-  }
-
-  .company-name img {
-    width: 40px; /* Reduce logo size for mobile */
-    height: 40px;
-  }
-
-  .nav-right ul {
-    display: none; /* Hide navigation menu by default */
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    background-color: #232b2d;
-    text-align: center;
-  }
-
-  .nav-right ul.show {
-    display: flex; /* Display navigation when hamburger menu is clicked */
-  }
-
-  /* Hamburger Icon */
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 15px;
-  }
-
-  .hamburger div {
-    width: 30px;
-    height: 3px;
-    background-color: #f3e17f;
-    margin: 4px 0;
-  }
-
-  .about-us-section {
-    padding: 30px 10px;
-  }
-
-  .about-us-section h2 {
-    font-size: 24px;
-  }
-
-  .about-us-section p {
-    font-size: 16px;
-  }
-
-  /* Gallery Section */
-  .gallery-grid {
-    grid-template-columns: 1fr; /* Stack gallery items vertically on small screens */
-  }
-
-  .gallery-item img {
-    height: auto; /* Let the images scale responsively */
-  }
-
-  /* Services Section */
-  .services-grid {
-    grid-template-columns: 1fr; /* Stack service cards vertically on mobile */
-  }
-
-  .service-card {
-    padding: 20px;
-    min-height: 250px; /* Reduce card height on mobile */
-  }
-
-  .service-card h3 {
-    font-size: 1.2rem;
-  }
-
-  .service-card p {
-    font-size: 14px;
+      grid-template-columns: 1fr; /* One column on mobile */
   }
 
   /* FAQ Section */
   .faq-question {
-    font-size: 16px;
+      font-size: 16px; /* Smaller font size for mobile */
+      padding: 10px; /* Adjust padding */
+  }
+
+  .faq-item p {
+      font-size: 14px; /* Smaller font size for better fit */
   }
 
   /* Contact Us Section */
   .contact-info {
-    flex-direction: column;
-    align-items: center;
+      flex-direction: column; /* Stack contact items vertically */
+      align-items: center; /* Center align items */
+      gap: 15px; /* Reduced gap */
   }
 
   .contact-item {
-    font-size: 16px;
-    text-align: center;
-  }
-
-  .contact-item i {
-    font-size: 20px;
+      font-size: 16px; /* Smaller font size for mobile */
   }
 }
