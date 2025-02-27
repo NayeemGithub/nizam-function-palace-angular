@@ -32,11 +32,28 @@
   border-radius: 50%;
 }
 
+/* Base font size for desktop/laptops */
 .company-name h1 {
   font-size: 24px;
-  font-family: 'cursive', sans-serif;
-  font-style: italic;
+  font-family: 'Copperplate Gothic Bold', sans-serif;
+  font-style: normal;
+  white-space: nowrap; /* Prevent line break */
 }
+
+/* Mobile responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .company-name h1 {
+    font-size: 22px; /* Adjust font size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .company-name h1 {
+    font-size: 18px; /* Further reduce font size for mobile phones */
+    text-align: center; /* Center align for small devices */
+  }
+}
+
 
 /* Navigation styling */
 .nav-right ul {
